@@ -1,20 +1,119 @@
+# Alexis Mupole - Digital Engineering Consultant
+
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-alexismupole.com-blue)](https://alexismupole.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-alexismupole-blue)](https://linkedin.com/in/alexismupole)
+[![GitHub](https://img.shields.io/badge/GitHub-Alexis--Mupole-black)](https://github.com/Alexis-Mupole)
+
 </div>
 
-# Run and deploy your AI Studio app
+## About
 
-This contains everything you need to run your app locally.
+Professional portfolio website for Alexis Mupole - Digital Engineering Consultant and Full-Stack Developer based in Kinshasa, DR Congo.
 
-View your app in AI Studio: https://ai.studio/apps/08633ea6-1342-4fea-9c03-a0a93c06f5db
+Specializing in:
+- Web Application Development
+- Cloud Architecture & Solutions
+- System Administration
+- Technical Consulting
 
-## Run Locally
+## Tech Stack
 
-**Prerequisites:**  Node.js
+- **Frontend:** React, TypeScript, Tailwind CSS
+- **Build Tool:** Vite
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
 
+## Getting Started
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` folder.
+
+## Project Structure
+
+```
+├── components/       # React components
+├── pages/           # Page components
+├── data/            # JSON data (projects)
+├── src/
+│   ├── context/     # React context (translations)
+│   └── types/       # TypeScript type definitions
+├── images/          # Static images
+└── translations.ts  # Language translations
+```
+
+## Adding Projects
+
+Projects are managed in `data/projects.json`. To add a new project:
+
+```json
+{
+  "id": "unique-project-id",
+  "title": {
+    "en": "Project Title",
+    "fr": "Titre du Projet",
+    "sw": "Kichwa cha Mradi"
+  },
+  "description": {
+    "en": "Description in English",
+    "fr": "Description en Français",
+    "sw": "Maelezo kwa Kiswahili"
+  },
+  "image": "https://...",
+  "tags": ["React", "Node.js"],
+  "link": "https://github.com/...",
+  "liveLink": "https://...",
+  "featured": true
+}
+```
+
+## Languages
+
+The website supports 3 languages:
+- English (en)
+- French (fr)
+- Swahili (sw)
+
+Language can be switched using the toggle in the navigation bar.
+
+## Deployment
+
+Build the project and deploy the `dist` folder to any static hosting service:
+
+```bash
+npm run build
+```
+
+Recommended platforms:
+- Vercel
+- Netlify
+- GitHub Pages
+
+## License
+
+MIT License - See LICENSE file for details.
+
+---
+
+Built with ❤️ by Alexis Mupole
