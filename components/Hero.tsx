@@ -3,6 +3,7 @@ import React from 'react';
 import { Page } from '../App';
 import { MessageCircle, Mail, Linkedin, Twitter, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import profileImage from '../images/alex.jpeg';
 
 interface HeroProps {
   onNavigate: (page: Page) => void;
@@ -69,10 +70,9 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-black brutal-shadow-sm">
                   <img 
-                    src="https://picsum.photos/seed/alexis/200/200" 
+                    src={profileImage} 
                     alt="Alexis Mupole" 
                     className="w-full h-full object-cover"
-                    referrerPolicy="no-referrer"
                   />
                 </div>
                 <div>
