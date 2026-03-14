@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import { Page } from '../App';
+import { useTranslation } from '../src/context/LanguageContext';
 import { ArrowRight, CheckCircle, Zap, Shield, Globe, Clock } from 'lucide-react';
 
 interface HomeProps {
@@ -9,6 +10,7 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ onNavigate }) => {
+  const { lang } = useTranslation();
 
   return (
     <div className="bg-white">
@@ -17,12 +19,14 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       <section className="py-20 lg:py-28 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-blue-600 text-sm font-semibold uppercase tracking-wider mb-3">Why Choose Me</h2>
+            <h2 className="text-blue-600 text-sm font-semibold uppercase tracking-wider mb-3">
+              {lang === 'en' ? 'Why Choose Me' : lang === 'fr' ? 'Pourquoi Me Choisir' : 'Kwa Nini Kunichague'}
+            </h2>
             <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Delivering Excellence in Every Project
+              {lang === 'en' ? 'Delivering Excellence in Every Project' : lang === 'fr' ? 'Livrer l\'Excellence dans Chaque Projet' : 'Kutoa Excellence katika Kila Mradi'}
             </h3>
             <p className="text-slate-600 text-lg">
-              I combine technical expertise with business acumen to deliver solutions that drive real results.
+              {lang === 'en' ? 'I combine technical expertise with business acumen to deliver solutions that drive real results.' : lang === 'fr' ? 'Je combine expertise technique et sens des affaires pour deliver des solutions qui génèrent de vrais résultats.' : 'NingCombine ujuzi wa kiufundi na ujuzi wa biashara kutoa suluthizo zinazonga Matokeo halisi.'}
             </p>
           </div>
 
@@ -101,6 +105,15 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       </section>
 
       <Projects />
+
+      <section className="py-12 bg-slate-50 text-center">
+        <button 
+          onClick={() => onNavigate('projects')}
+          className="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-900 font-semibold rounded-xl border border-slate-200 hover:bg-slate-900 hover:text-white transition-all"
+        >
+          {lang === 'en' ? 'View All Projects' : lang === 'fr' ? 'Voir Tous les Projets' : 'Tazama Miradi Yote'} <ArrowRight size={18} />
+        </button>
+      </section>
 
       <section className="py-20 lg:py-28 bg-slate-900 text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
