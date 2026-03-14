@@ -1,69 +1,145 @@
-
 import React from 'react';
 import { Page } from '../App';
+import { CheckCircle, ArrowRight, Clock, Shield, Zap, Star } from 'lucide-react';
 
 interface TarifsPageProps {
   onNavigate: (page: Page) => void;
 }
 
 const TarifsPage: React.FC<TarifsPageProps> = ({ onNavigate }) => {
+  const plans = [
+    {
+      name: "Starter",
+      description: "Perfect for individuals and small projects",
+      price: "Custom",
+      features: [
+        "Single page website",
+        "Basic functionality",
+        "Mobile responsive",
+        "Contact form integration",
+        "Social media links",
+        "1 revision round"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      description: "Ideal for growing businesses",
+      price: "Custom",
+      features: [
+        "Multi-page website",
+        "Custom functionality",
+        "CMS integration",
+        "Basic SEO optimization",
+        "Analytics setup",
+        "3 revision rounds",
+        "1 month support"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      description: "Full-scale solutions for large organizations",
+      price: "Custom",
+      features: [
+        "Complex web application",
+        "Custom development",
+        "API integration",
+        "Advanced SEO",
+        "E-commerce functionality",
+        "Unlimited revisions",
+        "6 months support",
+        "Training session"
+      ],
+      popular: false
+    }
+  ];
+
+  const inclusions = [
+    { icon: <Clock size={20} />, text: "Fast turnaround times" },
+    { icon: <Shield size={20} />, text: "Secure, reliable code" },
+    { icon: <Zap size={20} />, text: "Performance optimized" },
+    { icon: <Star size={20} />, text: "Post-launch support" },
+  ];
+
   return (
-    <div className="bg-white min-h-screen">
-      <section className="pt-32 pb-16 bg-white border-b border-black/5 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter uppercase leading-none">Tarifs & Engagement</h1>
-          <p className="text-sm md:text-base text-slate-500 max-w-xl mx-auto leading-relaxed font-medium">
-            Des options flexibles et transparentes, conçues pour être accessibles aux ONG, entreprises et particuliers.
-          </p>
+    <div className="bg-slate-50 min-h-screen">
+      <section className="pt-32 pb-16 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+              Pricing
+            </h1>
+            <p className="text-lg text-slate-600 leading-relaxed">
+              Transparent, flexible pricing tailored to your project needs. 
+              Every project is unique - let's discuss your requirements.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="max-w-[1400px] mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-20">
-            <PlanCard 
-              name="Support Particulier"
-              target="Étudiants & Individus"
-              price="Accessibilité Prioritaire"
-              features={["Diagnostic technique gratuit", "Maintenance logicielle", "Aide aux services en ligne", "Support WhatsApp Pro"]}
-              note="Tarification solidaire."
-            />
-            <PlanCard 
-              name="Expertise Business"
-              target="PME & Boutiques locales"
-              price="Forfait Adapté"
-              features={["Gestion de stock Excel", "Sécurisation réseau WiFi", "Facturation simplifiée", "Maintenance préventive"]}
-              highlight
-            />
-            <PlanCard 
-              name="Mission Stratégique"
-              target="ONG & Grandes Structures"
-              price="Sur Devis"
-              features={["Architecture Web Cloud", "Collecte Kobo Ecosystem", "Formation du personnel", "Rapports d'activités pro"]}
-            />
+      <section className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            {plans.map((plan, i) => (
+              <PricingCard key={i} {...plan} onNavigate={onNavigate} />
+            ))}
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch">
-            <div className="bg-black p-10 rounded-3xl text-white relative overflow-hidden">
-               <h3 className="text-xl font-black mb-6 uppercase tracking-tight text-[var(--brutal-accent)]">Accompagnement Inclus</h3>
-               <p className="text-sm text-white/60 mb-10 font-medium">Chaque intervention majeure inclut un support post-livraison pour garantir votre sérénité.</p>
-               <ul className="space-y-4">
-                 <li className="flex items-center text-[9px] font-black uppercase tracking-widest"><span className="w-2 h-2 bg-[var(--brutal-accent)] mr-4 rounded-full"></span> 30 jours de suivi technique</li>
-                 <li className="flex items-center text-[9px] font-black uppercase tracking-widest"><span className="w-2 h-2 bg-[var(--brutal-accent)] mr-4 rounded-full"></span> Documentation simplifiée</li>
-                 <li className="flex items-center text-[9px] font-black uppercase tracking-widest"><span className="w-2 h-2 bg-[var(--brutal-accent)] mr-4 rounded-full"></span> Hotline d'urgence prioritaires</li>
-               </ul>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-xl border border-slate-100">
+              <h3 className="text-xl font-bold text-slate-900 mb-6">What's Included</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {inclusions.map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
+                      {item.icon}
+                    </div>
+                    <span className="text-slate-700 font-medium">{item.text}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-            
-            <div className="bg-[var(--brutal-accent)] p-10 rounded-3xl text-black">
-               <h3 className="text-xl font-black mb-6 uppercase tracking-tight">Première Étape Gratuite</h3>
-               <p className="text-black/70 mb-10 text-sm font-medium">J'offre une consultation de 30 minutes pour analyser vos besoins sans aucun engagement.</p>
-               <button 
+
+            <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8 lg:p-10 text-white">
+              <h3 className="text-xl font-bold mb-4">Free Consultation</h3>
+              <p className="text-blue-100 mb-6 leading-relaxed">
+                I offer a free 30-minute consultation to discuss your project requirements 
+                and provide a detailed quote with no obligation.
+              </p>
+              <button 
                 onClick={() => onNavigate('contact')}
-                className="w-full py-4 bg-black text-white rounded-full font-black uppercase tracking-widest text-[10px] hover:bg-white hover:text-black transition-all"
-               >
-                 Réserver mon créneau
-               </button>
+                className="inline-flex items-center gap-3 px-6 py-3 bg-white text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transition-colors"
+              >
+                Book a Call <ArrowRight size={18} />
+              </button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+          </div>
+          <div className="space-y-6">
+            <FaqItem 
+              question="How long does a typical project take?"
+              answer="Project timelines vary based on complexity. A simple website typically takes 2-4 weeks, while complex web applications may take 2-3 months."
+            />
+            <FaqItem 
+              question="Do you offer ongoing maintenance?"
+              answer="Yes! I offer maintenance packages to keep your website secure, updated, and running smoothly after launch."
+            />
+            <FaqItem 
+              question="What technologies do you use?"
+              answer="I work with modern technologies including React, Next.js, TypeScript, Node.js, and cloud platforms like AWS and Azure."
+            />
+            <FaqItem 
+              question="Can you work with my existing website?"
+              answer="Absolutely! I can audit, optimize, and enhance existing websites or migrate them to modern platforms."
+            />
           </div>
         </div>
       </section>
@@ -71,30 +147,54 @@ const TarifsPage: React.FC<TarifsPageProps> = ({ onNavigate }) => {
   );
 };
 
-const PlanCard: React.FC<{name: string, target: string, price: string, features: string[], highlight?: boolean, note?: string}> = ({name, target, price, features, highlight, note}) => (
-  <div className={`p-8 rounded-3xl transition-all flex flex-col h-full border border-black/5 ${highlight ? 'bg-black text-white shadow-2xl md:scale-105 z-10' : 'bg-slate-50/50 text-black'}`}>
-    <div className="mb-8">
-      <h3 className="text-xl font-black mb-1 uppercase tracking-tight">{name}</h3>
-      <p className={`text-[8px] font-black uppercase tracking-[0.3em] ${highlight ? 'text-[var(--brutal-accent)]' : 'text-slate-400'}`}>{target}</p>
+const PricingCard: React.FC<{
+  name: string;
+  description: string;
+  price: string;
+  features: string[];
+  popular: boolean;
+  onNavigate: (page: Page) => void;
+}> = ({ name, description, price, features, popular, onNavigate }) => (
+  <div className={`relative bg-white rounded-2xl p-8 shadow-lg border transition-all hover:shadow-xl ${
+    popular ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-slate-100'
+  }`}>
+    {popular && (
+      <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-bold px-4 py-1 rounded-full">
+        MOST POPULAR
+      </div>
+    )}
+    <div className="mb-6">
+      <h3 className="text-xl font-bold text-slate-900 mb-2">{name}</h3>
+      <p className="text-sm text-slate-600">{description}</p>
     </div>
-    
     <div className="mb-8">
-      <div className={`text-sm font-black tracking-tight uppercase ${highlight ? 'text-white' : 'text-black'}`}>{price}</div>
+      <span className="text-3xl font-bold text-slate-900">{price}</span>
     </div>
-
-    <ul className="space-y-4 mb-8 flex-grow">
-      {features.map(f => (
-        <li key={f} className="flex items-center text-[9px] font-bold uppercase tracking-widest">
-          <span className={`w-1.5 h-1.5 mr-3 rounded-full ${highlight ? 'bg-[var(--brutal-accent)]' : 'bg-black'}`}></span> {f}
+    <ul className="space-y-3 mb-8">
+      {features.map((feature, i) => (
+        <li key={i} className="flex items-center gap-3 text-sm text-slate-700">
+          <CheckCircle size={18} className="text-green-500 shrink-0" />
+          {feature}
         </li>
       ))}
     </ul>
-
-    {note && <p className="text-[8px] text-slate-400 italic mb-6 font-black uppercase tracking-widest">{note}</p>}
-
-    <button className={`w-full py-3 rounded-full text-[9px] font-black uppercase tracking-widest transition-all ${highlight ? 'bg-[var(--brutal-accent)] text-black hover:bg-white' : 'bg-white text-black border border-black/10 hover:bg-black hover:text-white'}`}>
-      Demander un devis
+    <button 
+      onClick={() => onNavigate('contact')}
+      className={`w-full py-3 rounded-xl font-semibold transition-colors ${
+        popular 
+          ? 'bg-blue-600 text-white hover:bg-blue-700' 
+          : 'bg-slate-100 text-slate-900 hover:bg-slate-200'
+      }`}
+    >
+      Get Started
     </button>
+  </div>
+);
+
+const FaqItem: React.FC<{question: string; answer: string}> = ({ question, answer }) => (
+  <div className="bg-slate-50 rounded-xl p-6">
+    <h4 className="font-bold text-slate-900 mb-2">{question}</h4>
+    <p className="text-slate-600 text-sm leading-relaxed">{answer}</p>
   </div>
 );
 
