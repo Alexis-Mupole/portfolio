@@ -1,167 +1,167 @@
 {
   "services": [
     {
-      "id": "web-development",
+      "id": "web-cms-engineering",
       "icon": "Code",
       "title": {
-        "en": "Web Development",
-        "fr": "Développement Web",
-        "sw": "Uendelezaji wa Wavuti"
+        "en": "Web & CMS Engineering",
+        "fr": "Ingénierie Web & CMS",
+        "sw": "Uhandisi wa Wavuti na CMS"
       },
       "description": {
-        "en": "Custom web applications built with modern frameworks. From responsive websites to complex enterprise solutions.",
-        "fr": "Applications web personnalisées construites avec des frameworks modernes. Des sites responsifs aux solutions d'entreprise complexes.",
-        "sw": "Programu za wavuti za kibinafsi zilizojengwa kwa vi框架 vya kisasa. Kutoka kwa tovuti zinazojibu kwa miradi mingi ya biashara."
+        "en": "Development of dynamic platforms and custom Content Management Systems (CMS) designed for high performance.",
+        "fr": "Développement de plateformes dynamiques et de systèmes de gestion de contenu (CMS) sur mesure conçus pour la performance.",
+        "sw": "Uendelezaji wa majukwaa yanayobadilika na mifumo ya usimamizi wa maudhui (CMS) iliyoundwa kwa utendaji wa juu."
       },
       "features": {
-        "en": ["Full-Stack Development", "Progressive Web Apps", "API Development", "CMS Integration"],
-        "fr": ["Développement Full-Stack", "Applications Web Progressives", "Développement d'API", "Intégration CMS"],
-        "sw": ["Uendelezaji wa Full-Stack", "Programu za Wavuti za Progress", "Uendelezaji wa API", "Muunganisho wa CMS"]
+        "en": ["Full-Stack Solutions", "Custom CMS", "Dynamic Dashboards", "Scalable Architecture"],
+        "fr": ["Solutions Full-Stack", "CMS Personnalisés", "Tableaux de bord dynamiques", "Architecture évolutive"],
+        "sw": ["Suluhisho za Full-Stack", "CMS Maalum", "Dashibodi zinazobadilika", "Muundo unaoweza kupanuka"]
       },
       "color": "blue"
     },
     {
-      "id": "cloud-solutions",
-      "icon": "Cloud",
-      "title": {
-        "en": "Cloud Solutions",
-        "fr": "Solutions Cloud",
-        "sw": "Suluhisho za Wingu"
-      },
-      "description": {
-        "en": "Scalable cloud infrastructure design and deployment. AWS, Azure, and custom cloud architectures.",
-        "fr": "Conception et déploiement d'infrastructure cloud évolutive. AWS, Azure et architectures cloud personnalisées.",
-        "sw": "Muundo wa msingi wa wingu wenye kukua na usakinishaji. AWS, Azure, na muundo wa wingu wa kibinafsi."
-      },
-      "features": {
-        "en": ["Cloud Migration", "Infrastructure as Code", "Serverless Architecture", "Cloud Security"],
-        "fr": ["Migration Cloud", "Infrastructure en tant que Code", "Architecture Serverless", "Sécurité Cloud"],
-        "sw": ["Uhamiaji wa Wingu", "Msingi wa Kama Kanuni", "Muundo usio na Seva", "Usalama wa Wingu"]
-      },
-      "color": "sky"
-    },
-    {
-      "id": "ai-ml",
-      "icon": "Brain",
-      "title": {
-        "en": "AI & Machine Learning",
-        "fr": "IA et Apprentissage Automatique",
-        "sw": "AI na Kujifunza kwa Mashine"
-      },
-      "description": {
-        "en": "Intelligent solutions powered by artificial intelligence. Smart automation and data-driven insights.",
-        "fr": "Solutions intelligentes alimentées par l'intelligence artificielle. Automatisation intelligente et informations basées sur les données.",
-        "sw": "Suluhisho za kigeuzi zinazoungwa mkono na akili bandia. Otomatiki smart na maarifa yanayotokana na data."
-      },
-      "features": {
-        "en": ["AI Integration", "Data Analytics", "Process Automation", "Custom AI Solutions"],
-        "fr": ["Intégration IA", "Analyse de Données", "Automatisation des Processus", "Solutions IA Personnalisées"],
-        "sw": ["Muunganisho wa AI", " Uchambuzi wa Data", "Otomatiki ya Mchakato", "Suluhisho za AI za Kibinafsi"]
-      },
-      "color": "purple"
-    },
-    {
-      "id": "cybersecurity",
-      "icon": "Shield",
-      "title": {
-        "en": "Cybersecurity",
-        "fr": "Cybersécurité",
-        "sw": "Usalama wa Mtandao"
-      },
-      "description": {
-        "en": "Protect your digital assets with enterprise-grade security practices and protocols.",
-        "fr": "Protégez vos actifs numériques avec des pratiques et protocoles de sécurité de niveau entreprise.",
-        "sw": "Kinga mali yako ya kidijitali na miongozo na itifaki za usalama wa kiwango cha biashara."
-      },
-      "features": {
-        "en": ["Security Audits", "Vulnerability Assessment", "Data Encryption", "Compliance"],
-        "fr": ["Audits de Sécurité", "Évaluation des Vulnérabilités", "Chiffrement des Données", "Conformité"],
-        "sw": ["Ukaguzi wa Usalama", "Tathmini ya Madhaifu", "Usimbaji wa Data", "Utii"]
-      },
-      "color": "green"
-    },
-    {
-      "id": "data-engineering",
+      "id": "data-kobo-odk-expert",
       "icon": "Database",
       "title": {
-        "en": "Data Engineering",
-        "fr": "Ingénierie des Données",
-        "sw": "Uhandisi wa Data"
+        "en": "Data Expertise (Kobo/ODK)",
+        "fr": "Expertise Data (Kobo/ODK)",
+        "sw": "Utaalamu wa Data (Kobo/ODK)"
       },
       "description": {
-        "en": "Build robust data pipelines and storage solutions. Transform raw data into actionable insights.",
-        "fr": "Construisez des pipelines de données robustes et des solutions de stockage. Transformez les données brutes en informations exploitables.",
-        "sw": "Jenga mifereji imara ya data na suluhisho za hifadhi. Geuza data ghafi katika maarifa yanayoweza kutekelezwa."
+        "en": "Digitalization of surveys and mobile data collection optimized for humanitarian and research sectors.",
+        "fr": "Digitalisation des enquêtes et collecte de données mobiles optimisée pour les secteurs humanitaires et de recherche.",
+        "sw": "Uwekaji wa kidijitali wa tafiti na ukusanyaji wa data kwenye simu kwa ajili ya sekta za kibinadamu na utafiti."
       },
       "features": {
-        "en": ["Database Design", "Data Migration", "ETL Pipelines", "Business Intelligence"],
-        "fr": ["Conception de Base de Données", "Migration de Données", "Pipelines ETL", "Intelligence d'Affaires"],
-        "sw": ["Ubuni wa Hifadhi ya Data", "Uhamiaji wa Data", "Mifereji ya ETL", "Akili ya Biashara"]
+        "en": ["Kobo Collect setup", "ODK Integration", "Offline data capture", "Real-time Analytics"],
+        "fr": ["Configuration Kobo Collect", "Intégration ODK", "Saisie hors-ligne", "Analytique temps réel"],
+        "sw": ["Usanidi wa Kobo Collect", "Muunganisho wa ODK", "Uingizaji data nje ya mtandao", "Uchambuzi wa wakati halisi"]
       },
       "color": "amber"
     },
     {
-      "id": "mobile-development",
-      "icon": "Smartphone",
+      "id": "installation-systems",
+      "icon": "Settings",
       "title": {
-        "en": "Mobile Development",
-        "fr": "Développement Mobile",
-        "sw": "Uendelezaji wa Simu"
+        "en": "Installation & Systems",
+        "fr": "Installation & Systèmes",
+        "sw": "Usakinishaji na Mifumo"
       },
       "description": {
-        "en": "Native and cross-platform mobile applications that deliver exceptional user experiences.",
-        "fr": "Applications mobiles natives et multiplateformes qui offrent des expériences utilisateur exceptionnelles.",
-        "sw": "Programu za simu za asili na zinazokaa vip平台 mbalimbali zutoa mtindo wa kushangaza wa mtumiaji."
+        "en": "Professional deployment of operating systems, hardware maintenance, and critical technical support.",
+        "fr": "Déploiement professionnel de systèmes d'exploitation, maintenance hardware et support technique critique.",
+        "sw": "Usambazaji wa kitaalamu wa mifumo ya uendeshaji, matengenezo ya vifaa, na usaidizi muhimu wa kiufundi."
       },
       "features": {
-        "en": ["iOS Development", "Android Development", "React Native", "App Store Optimization"],
-        "fr": ["Développement iOS", "Développement Android", "React Native", "Optimisation App Store"],
-        "sw": ["Uendelezaji wa iOS", "Uendelezaji wa Android", "React Native", "Uboreshaji wa Duka la Programu"]
+        "en": ["OS Deployment", "Hardware Maintenance", "System Optimization", "Troubleshooting"],
+        "fr": ["Déploiement d'OS", "Maintenance Hardware", "Optimisation Système", "Dépannage"],
+        "sw": ["Usambazaji wa OS", "Matengenezo ya Vifaa", "Uboreshaji wa Mfumo", "Utatuzi wa matatizo"]
+      },
+      "color": "sky"
+    },
+    {
+      "id": "infrastructure-networking",
+      "icon": "Wifi",
+      "title": {
+        "en": "Infrastructure & Networks",
+        "fr": "Infrastructure & Réseaux",
+        "sw": "Miundombinu na Mitandao"
+      },
+      "description": {
+        "en": "Configuration and maintenance of local network infrastructures using Cisco standards.",
+        "fr": "Configuration et maintenance d'infrastructures réseaux locaux selon les standards Cisco.",
+        "sw": "Usanidi na matengenezo ya miundombinu ya mtandao wa ndani kwa kutumia viwango vya Cisco."
+      },
+      "features": {
+        "en": ["Cisco Networking", "WiFi Optimization", "LAN/WAN Setup", "Network Security"],
+        "fr": ["Réseaux Cisco", "Optimisation WiFi", "Installation LAN/WAN", "Sécurisation réseau"],
+        "sw": ["Mitandao ya Cisco", "Uboreshaji wa WiFi", "Usanidi wa LAN/WAN", "Usalama wa Mtandao"]
+      },
+      "color": "indigo"
+    },
+    {
+      "id": "cybersecurity-digital-awareness",
+      "icon": "Shield",
+      "title": {
+        "en": "Cybersecurity & Awareness",
+        "fr": "Cybersécurité & Audit",
+        "sw": "Usalama wa Mtandao na Ukaguzi"
+      },
+      "description": {
+        "en": "Vulnerability assessment, data protection, and Digital Awareness training for users.",
+        "fr": "Évaluation des vulnérabilités, protection des données et formation à la sensibilisation numérique.",
+        "sw": "Tathmini ya udhaifu, ulinzi wa data, na mafunzo ya uelewa wa kidijitali kwa watumiaji."
+      },
+      "features": {
+        "en": ["Security Audits", "Data Protection", "Digital Awareness", "Malware Removal"],
+        "fr": ["Audits de sécurité", "Protection des données", "Sensibilisation numérique", "Nettoyage Malware"],
+        "sw": ["Ukaguzi wa Usalama", "Ulinzi wa Data", "Uelewa wa Kidijitali", "Kuondoa Malware"]
+      },
+      "color": "green"
+    },
+    {
+      "id": "office-automation-365",
+      "icon": "FileText",
+      "title": {
+        "en": "Advanced Office (365)",
+        "fr": "Bureautique Avancée (MS 365)",
+        "sw": "Otomatiki ya Ofisi (MS 365)"
+      },
+      "description": {
+        "en": "Advanced Excel automation, business reporting, and data modeling for efficient workflows.",
+        "fr": "Automatisation Excel avancée, reporting business et modélisation de données pour des flux efficaces.",
+        "sw": "Otomatiki ya Excel, ripoti za biashara, na uundaji wa data kwa ajili ya mtiririko bora wa kazi."
+      },
+      "features": {
+        "en": ["Excel Automation", "Business Intelligence", "Data Modeling", "Workflow efficiency"],
+        "fr": ["Automatisation Excel", "Business Intelligence", "Modélisation de données", "Efficacité des flux"],
+        "sw": ["Otomatiki ya Excel", "Akili ya Biashara", "Uundaji wa Data", "Ufanisi wa mtiririko"]
       },
       "color": "rose"
     }
   ],
   "process": {
     "en": [
-      { "title": "Discovery", "description": "Understanding your requirements and goals" },
-      { "title": "Development", "description": "Building your solution with best practices" },
-      { "title": "Deployment", "description": "Launching and monitoring your project" },
-      { "title": "Support", "description": "Ongoing maintenance and improvements" }
+      { "title": "Audit & Discovery", "description": "Analyzing technical requirements and business objectives." },
+      { "title": "Strategic Design", "description": "Architecting custom solutions based on dual IT-Business expertise." },
+      { "title": "Professional Setup", "description": "Rigorous development and secure system installation." },
+      { "title": "Support & Growth", "description": "Ongoing maintenance and continuous skills transfer." }
     ],
     "fr": [
-      { "title": "Découverte", "description": "Comprendre vos exigences et objectifs" },
-      { "title": "Développement", "description": "Construire votre solution avec les meilleures pratiques" },
-      { "title": "Déploiement", "description": "Lancement et surveillance de votre projet" },
-      { "title": "Support", "description": "Maintenance continue et améliorations" }
+      { "title": "Audit & Découverte", "description": "Analyse des besoins techniques et des objectifs business." },
+      { "title": "Conception Stratégique", "description": "Architecture de solutions basée sur la double expertise IT-Business." },
+      { "title": "Installation Pro", "description": "Développement rigoureux et installation sécurisée des systèmes." },
+      { "title": "Support & Croissance", "description": "Maintenance continue et transfert de compétences permanent." }
     ],
     "sw": [
-      { "title": "Utambuzi", "description": "Kuelewa mahitaji yako na malengo yako" },
-      { "title": "Uendelezaji", "description": "Kujenga suluhisho lako na desturi bora" },
-      { "title": "Usakinishaji", "description": "Kuzindua na kufuatilia mradi wako" },
-      { "title": "Usaidizi", "description": "Matengenezo yaendeleo na uboreshaji" }
+      { "title": "Ukaguzi na Utambuzi", "description": "Kuchambua mahitaji ya kiufundi na malengo ya biashara." },
+      { "title": "Ubuni wa Kimkakati", "description": "Kujenga suluhisho maalum kulingana na utaalamu wa IT na Biashara." },
+      { "title": "Usakinishaji wa Kitaalamu", "description": "Uendelezaji makini na usakinishaji salama wa mifumo." },
+      { "title": "Usaidizi na Ukuaji", "description": "Matengenezo endelevu na uhamishaji wa ujuzi wa mara kwa mara." }
     ]
   },
   "whyChoose": {
     "en": [
-      "5+ years of industry experience",
-      "Fast turnaround times",
-      "Clean, maintainable code",
-      "Post-launch support included",
-      "Transparent pricing"
+      "BSc in Computer Science (USA) & Business Computing (Uganda)",
+      "Regional Expert focused on Goma-Kampala axis",
+      "Cisco Academy & HP IT for Business Certified",
+      "Life-long Learner dedicated to digital accessibility",
+      "Ethical Leadership and human-centered technology"
     ],
     "fr": [
-      "Plus de 5 ans d'expérience",
-      "Délais rapides",
-      "Code propre et maintenable",
-      "Support post-lancement inclus",
-      "Tarification transparente"
+      "Licence en Computer Science (USA) & Business Computing (Ouganda)",
+      "Expert régional focalisé sur l'axe Goma-Kampala",
+      "Certifié Cisco Academy & HP IT for Business",
+      "Engagement 'Life-long Learner' pour l'accessibilité",
+      "Leadership éthique et technologie centrée sur l'humain"
     ],
     "sw": [
-      "Miaka 5+ ya uzoefu wa tasnia",
-      "Muda wa haraka wa kujibu",
-      "Code safi na ya kudumisha",
-      "Usaidizi baada ya kuzindua umejumuishwa",
-      "Bei wazi"
+      "Shahada ya Sayansi ya Kompyuta (USA) na Kompyuta ya Biashara (Uganda)",
+      "Mtaalamu wa kikanda anayezingatia mhimili wa Goma-Kampala",
+      "Aliidhinishwa na Cisco Academy na HP IT for Business",
+      "Ahadi ya 'Life-long Learner' kwa upatikanaji wa kidijitali",
+      "Uongozi wa kimaadili na teknolojia inayomlenga binadamu"
     ]
   }
 }
