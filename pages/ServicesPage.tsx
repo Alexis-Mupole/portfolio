@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTranslation } from '../src/context/LanguageContext';
 import { 
-  Code, Cloud, Database, Shield, Smartphone, 
-  Brain, ArrowRight, CheckCircle, Zap 
+  Code, Database, Shield, Settings, Wifi, FileText,
+  ArrowRight, CheckCircle, Zap 
 } from 'lucide-react';
 
 interface ServicesPageProps {
@@ -15,7 +15,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
   const colorClasses: Record<string, { bg: string; text: string; border: string }> = {
     blue: { bg: "bg-blue-50", text: "text-blue-600", border: "border-blue-200" },
     sky: { bg: "bg-sky-50", text: "text-sky-600", border: "border-sky-200" },
-    purple: { bg: "bg-purple-50", text: "text-purple-600", border: "border-purple-200" },
+    indigo: { bg: "bg-indigo-50", text: "text-indigo-600", border: "border-indigo-200" },
     green: { bg: "bg-green-50", text: "text-green-600", border: "border-green-200" },
     amber: { bg: "bg-amber-50", text: "text-amber-600", border: "border-amber-200" },
     rose: { bg: "bg-rose-50", text: "text-rose-600", border: "border-rose-200" },
@@ -23,90 +23,90 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
 
   const processData = {
     en: [
-      { title: "Discovery", description: "Understanding your requirements and goals" },
-      { title: "Development", description: "Building your solution with best practices" },
-      { title: "Deployment", description: "Launching and monitoring your project" },
-      { title: "Support", description: "Ongoing maintenance and improvements" }
+      { title: "Audit & Discovery", description: "Analyzing technical requirements and business objectives." },
+      { title: "Strategic Design", description: "Architecting custom solutions based on dual IT-Business expertise." },
+      { title: "Professional Setup", description: "Rigorous development and secure system installation." },
+      { title: "Support & Growth", description: "Ongoing maintenance and continuous skills transfer." }
     ],
     fr: [
-      { title: "Découverte", description: "Comprendre vos exigences et objectifs" },
-      { title: "Développement", description: "Construire votre solution avec les meilleures pratiques" },
-      { title: "Déploiement", description: "Lancer et surveiller votre projet" },
-      { title: "Support", description: "Maintenance continue et améliorations" }
+      { title: "Audit & Découverte", description: "Analyse des besoins techniques et des objectifs business." },
+      { title: "Conception Stratégique", description: "Architecture de solutions basée sur la double expertise IT-Business." },
+      { title: "Installation Pro", description: "Développement rigoureux et installation sécurisée des systèmes." },
+      { title: "Support & Croissance", description: "Maintenance continue et transfert de compétences permanent." }
     ],
     sw: [
-      { title: "Utambuzi", description: "Kuelewa mahitaji yako na malengo yako" },
-      { title: "Uendelezaji", description: "Kujenga suluhisho lako na desturi bora" },
-      { title: "Usakinishaji", description: "Kuzindua na kufuatilia mradi wako" },
-      { title: "Usaidizi", description: "Matengenezo yaendeleo na uboreshaji" }
+      { title: "Ukaguzi na Utambuzi", description: "Kuchambua mahitaji ya kiufundi na malengo ya biashara." },
+      { title: "Ubuni wa Kimkakati", description: "Kujenga suluhisho maalum kulingana na utaalamu wa IT na Biashara." },
+      { title: "Usakinishaji wa Kitaalamu", description: "Uendelezaji makini na usakinishaji salama wa mifumo." },
+      { title: "Usaidizi na Ukuaji", description: "Matengenezo endelevu na uhamishaji wa ujuzi wa mara kwa mara." }
     ]
   };
 
   const whyChooseData = {
     en: [
-      "5+ years of industry experience",
-      "Fast turnaround times",
-      "Clean, maintainable code",
-      "Post-launch support included",
-      "Transparent pricing"
+      "BSc in Computer Science (USA) & Business Computing (Uganda)",
+      "Regional Expert focused on Goma-Kampala axis",
+      "Cisco Academy & HP IT for Business Certified",
+      "Life-long Learner dedicated to digital accessibility",
+      "Ethical Leadership and human-centered technology"
     ],
     fr: [
-      "Plus de 5 ans d'expérience",
-      "Délais rapides",
-      "Code propre et maintenable",
-      "Support post-lancement inclus",
-      "Tarification transparente"
+      "Licence en Computer Science (USA) & Business Computing (Ouganda)",
+      "Expert régional focalisé sur l'axe Goma-Kampala",
+      "Certifié Cisco Academy & HP IT for Business",
+      "Engagement 'Life-long Learner' pour l'accessibilité",
+      "Leadership éthique et technologie centrée sur l'humain"
     ],
     sw: [
-      "Miaka 5+ ya uzoefu wa tasnia",
-      "Muda wa haraka wa kujibu",
-      "Code safi na ya kudumisha",
-      "Usaidizi baada ya kuzindua umejumuishwa",
-      "Bei wazi"
+      "Shahada ya Sayansi ya Kompyuta (USA) na Kompyuta ya Biashara (Uganda)",
+      "Mtaalamu wa kikanda anayezingatia mhimili wa Goma-Kampala",
+      "Aliidhinishwa na Cisco Academy na HP IT for Business",
+      "Ahadi ya 'Life-long Learner' kwa upatikanaji wa kidijitali",
+      "Uongozi wa kimaadili na teknolojia inayomlenga binadamu"
     ]
   };
 
   const servicesData = [
     {
       icon: <Code size={32} />,
-      title: lang === 'en' ? 'Web Development' : lang === 'fr' ? 'Développement Web' : 'Uendelezaji wa Wavuti',
-      description: lang === 'en' ? 'Custom web applications built with modern frameworks. From responsive websites to complex enterprise solutions.' : lang === 'fr' ? 'Applications web personnalisées construites avec des frameworks modernes.' : 'Programu za wavuti za kibinafsi zilizojengwa kwa viFramework vya kisasa.',
-      features: lang === 'en' ? ['Full-Stack Development', 'Progressive Web Apps', 'API Development', 'CMS Integration'] : lang === 'fr' ? ['Développement Full-Stack', 'Applications Web Progressives', 'Développement d\'API', 'Intégration CMS'] : ['Uendelezaji wa Full-Stack', 'Programu za Wavuti za Progress', 'Uendelezaji wa API', 'Muunganisho wa CMS'],
+      title: lang === 'en' ? 'Web & CMS Engineering' : lang === 'fr' ? 'Ingénierie Web & CMS' : 'Uhandisi wa Wavuti na CMS',
+      description: lang === 'en' ? 'Development of dynamic platforms and custom Content Management Systems (CMS) designed for high performance.' : lang === 'fr' ? 'Développement de plateformes dynamiques et de systèmes de gestion de contenu (CMS) sur mesure conçus pour la performance.' : 'Uendelezaji wa majukwaa yanayobadilika na mifumo ya usimamizi wa maudhui (CMS) iliyoundwa kwa utendaji wa juu.',
+      features: lang === 'en' ? ['Full-Stack Solutions', 'Custom CMS', 'Dynamic Dashboards', 'Scalable Architecture'] : lang === 'fr' ? ['Solutions Full-Stack', 'CMS Personnalisés', 'Tableaux de bord dynamiques', 'Architecture évolutive'] : ['Suluhisho za Full-Stack', 'CMS Maalum', 'Dashibodi zinazobadilika', 'Muundo unaoweza kupanuka'],
       color: 'blue'
     },
     {
-      icon: <Cloud size={32} />,
-      title: lang === 'en' ? 'Cloud Solutions' : lang === 'fr' ? 'Solutions Cloud' : 'Suluhisho za Wingu',
-      description: lang === 'en' ? 'Scalable cloud infrastructure design and deployment. AWS, Azure, and custom cloud architectures.' : lang === 'fr' ? 'Conception et déploiement d\'infrastructure cloud évolutive.' : 'Muundo wa msingi wa wingu wenye kukua na usakinishaji.',
-      features: lang === 'en' ? ['Cloud Migration', 'Infrastructure as Code', 'Serverless Architecture', 'Cloud Security'] : lang === 'fr' ? ['Migration Cloud', 'Infrastructure en tant que Code', 'Architecture Serverless', 'Sécurité Cloud'] : ['Uhamiaji wa Wingu', 'Msingi wa Kama Kanuni', 'Muundo usio na Seva', 'Usalama wa Wingu'],
-      color: 'sky'
-    },
-    {
-      icon: <Brain size={32} />,
-      title: lang === 'en' ? 'AI & Machine Learning' : lang === 'fr' ? 'IA et Apprentissage Automatique' : 'AI na Kujifunza kwa Mashine',
-      description: lang === 'en' ? 'Intelligent solutions powered by artificial intelligence. Smart automation and data-driven insights.' : lang === 'fr' ? 'Solutions intelligentes alimentées par l\'intelligence artificielle.' : 'Suluhisho za kigeuzi zinazoungwa mkono na akili bandia.',
-      features: lang === 'en' ? ['AI Integration', 'Data Analytics', 'Process Automation', 'Custom AI Solutions'] : lang === 'fr' ? ['Intégration IA', 'Analyse de Données', 'Automatisation des Processus', 'Solutions IA Personnalisées'] : ['Muunganisho wa AI', 'Uchambuzi wa Data', 'Otomatiki ya Mchakato', 'Suluhisho za AI za Kibinafsi'],
-      color: 'purple'
-    },
-    {
-      icon: <Shield size={32} />,
-      title: lang === 'en' ? 'Cybersecurity' : lang === 'fr' ? 'Cybersécurité' : 'Usalama wa Mtandao',
-      description: lang === 'en' ? 'Protect your digital assets with enterprise-grade security practices and protocols.' : lang === 'fr' ? 'Protégez vos actifs numériques avec des pratiques de sécurité de niveau entreprise.' : 'Kinga mali yako ya kidijitali na miongozo ya usalama.',
-      features: lang === 'en' ? ['Security Audits', 'Vulnerability Assessment', 'Data Encryption', 'Compliance'] : lang === 'fr' ? ['Audits de Sécurité', 'Évaluation des Vulnérabilités', 'Chiffrement des Données', 'Conformité'] : ['Ukaguzi wa Usalama', 'Tathmini ya Madhaifu', 'Usimbaji wa Data', 'Utii'],
-      color: 'green'
-    },
-    {
       icon: <Database size={32} />,
-      title: lang === 'en' ? 'Data Engineering' : lang === 'fr' ? 'Ingénierie des Données' : 'Uhandisi wa Data',
-      description: lang === 'en' ? 'Build robust data pipelines and storage solutions. Transform raw data into actionable insights.' : lang === 'fr' ? 'Construisez des pipelines de données robustes et des solutions de stockage.' : 'Jenga mifereji imara ya data na suluhisho za hifadhi.',
-      features: lang === 'en' ? ['Database Design', 'Data Migration', 'ETL Pipelines', 'Business Intelligence'] : lang === 'fr' ? ['Conception de Base de Données', 'Migration de Données', 'Pipelines ETL', 'Intelligence d\'Affaires'] : ['Ubuni wa Hifadhi ya Data', 'Uhamiaji wa Data', 'Mifereji ya ETL', 'Akili ya Biashara'],
+      title: lang === 'en' ? 'Data Expertise (Kobo/ODK)' : lang === 'fr' ? 'Expertise Data (Kobo/ODK)' : 'Utaalamu wa Data (Kobo/ODK)',
+      description: lang === 'en' ? 'Digitalization of surveys and mobile data collection optimized for humanitarian and research sectors.' : lang === 'fr' ? 'Digitalisation des enquêtes et collecte de données mobiles optimisée pour les secteurs humanitaires et de recherche.' : 'Uwekaji wa kidijitali wa tafiti na ukusanyaji wa data kwenye simu kwa ajili ya sekta za kibinadamu na utafiti.',
+      features: lang === 'en' ? ['Kobo Collect setup', 'ODK Integration', 'Offline data capture', 'Real-time Analytics'] : lang === 'fr' ? ['Configuration Kobo Collect', 'Intégration ODK', 'Saisie hors-ligne', 'Analytique temps réel'] : ['Usanidi wa Kobo Collect', 'Muunganisho wa ODK', 'Uingizaji data nje ya mtandao', 'Uchambuzi wa wakati halisi'],
       color: 'amber'
     },
     {
-      icon: <Smartphone size={32} />,
-      title: lang === 'en' ? 'Mobile Development' : lang === 'fr' ? 'Développement Mobile' : 'Uendelezaji wa Simu',
-      description: lang === 'en' ? 'Native and cross-platform mobile applications that deliver exceptional user experiences.' : lang === 'fr' ? 'Applications mobiles natives et multiplateformes qui offrent des expériences utilisateur exceptionnelles.' : 'Programu za simu za asili na za vipengele mbalimbali zitoa matumizi bora.',
-      features: lang === 'en' ? ['iOS Development', 'Android Development', 'React Native', 'App Store Optimization'] : lang === 'fr' ? ['Développement iOS', 'Développement Android', 'React Native', 'Optimisation App Store'] : ['Uendelezaji wa iOS', 'Uendelezaji wa Android', 'React Native', 'Uboreshaji wa Duka la Programu'],
+      icon: <Settings size={32} />,
+      title: lang === 'en' ? 'Installation & Systems' : lang === 'fr' ? 'Installation & Systèmes' : 'Usakinishaji na Mifumo',
+      description: lang === 'en' ? 'Professional deployment of operating systems, hardware maintenance, and critical technical support.' : lang === 'fr' ? 'Déploiement professionnel de systèmes d\'exploitation, maintenance hardware et support technique critique.' : 'Usambazaji wa kitaalamu wa mifumo ya uendeshaji, matengenezo ya vifaa, na usaidizi muhimu wa kiufundi.',
+      features: lang === 'en' ? ['OS Deployment', 'Hardware Maintenance', 'System Optimization', 'Troubleshooting'] : lang === 'fr' ? ['Déploiement d\'OS', 'Maintenance Hardware', 'Optimisation Système', 'Dépannage'] : ['Usambazaji wa OS', 'Matengenezo ya Vifaa', 'Uboreshaji wa Mfumo', 'Utatuzi wa matatizo'],
+      color: 'sky'
+    },
+    {
+      icon: <Wifi size={32} />,
+      title: lang === 'en' ? 'Infrastructure & Networks' : lang === 'fr' ? 'Infrastructure & Réseaux' : 'Miundombinu na Mitandao',
+      description: lang === 'en' ? 'Configuration and maintenance of local network infrastructures using Cisco standards.' : lang === 'fr' ? 'Configuration et maintenance d\'infrastructures réseaux locaux selon les standards Cisco.' : 'Usanidi na matengenezo ya miundombinu ya mtandao wa ndani kwa kutumia viwango vya Cisco.',
+      features: lang === 'en' ? ['Cisco Networking', 'WiFi Optimization', 'LAN/WAN Setup', 'Network Security'] : lang === 'fr' ? ['Réseaux Cisco', 'Optimisation WiFi', 'Installation LAN/WAN', 'Sécurisation réseau'] : ['Mitandao ya Cisco', 'Uboreshaji wa WiFi', 'Usanidi wa LAN/WAN', 'Usalama wa Mtandao'],
+      color: 'indigo'
+    },
+    {
+      icon: <Shield size={32} />,
+      title: lang === 'en' ? 'Cybersecurity & Awareness' : lang === 'fr' ? 'Cybersécurité & Audit' : 'Usalama wa Mtandao na Ukaguzi',
+      description: lang === 'en' ? 'Vulnerability assessment, data protection, and Digital Awareness training for users.' : lang === 'fr' ? 'Évaluation des vulnérabilités, protection des données et formation à la sensibilisation numérique.' : 'Tathmini ya udhaifu, ulinzi wa data, na mafunzo ya uelewa wa kidijitali kwa watumiaji.',
+      features: lang === 'en' ? ['Security Audits', 'Data Protection', 'Digital Awareness', 'Malware Removal'] : lang === 'fr' ? ['Audits de sécurité', 'Protection des données', 'Sensibilisation numérique', 'Nettoyage Malware'] : ['Ukaguzi wa Usalama', 'Ulinzi wa Data', 'Uelewa wa Kidijitali', 'Kuondoa Malware'],
+      color: 'green'
+    },
+    {
+      icon: <FileText size={32} />,
+      title: lang === 'en' ? 'Advanced Office (365)' : lang === 'fr' ? 'Bureautique Avancée (MS 365)' : 'Otomatiki ya Ofisi (MS 365)',
+      description: lang === 'en' ? 'Advanced Excel automation, business reporting, and data modeling for efficient workflows.' : lang === 'fr' ? 'Automatisation Excel avancée, reporting business et modélisation de données pour des flux efficaces.' : 'Otomatiki ya Excel, ripoti za biashara, na uundaji wa data kwa ajili ya mtiririko bora wa kazi.',
+      features: lang === 'en' ? ['Excel Automation', 'Business Intelligence', 'Data Modeling', 'Workflow efficiency'] : lang === 'fr' ? ['Automatisation Excel', 'Business Intelligence', 'Modélisation de données', 'Efficacité des flux'] : ['Otomatiki ya Excel', 'Akili ya Biashara', 'Uundaji wa Data', 'Ufanisi wa mtiririko'],
       color: 'rose'
     }
   ];
