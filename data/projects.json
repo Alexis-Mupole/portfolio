@@ -19,6 +19,24 @@
       "featured": true
     },
     {
+      "id": "stock-management-system",
+      "title": {
+        "en": "Inventory Management System",
+        "fr": "Système de Gestion d'Inventaire",
+        "sw": "Mfumo wa Usimamizi wa Hisa"
+      },
+      "description": {
+        "en": "Full-featured inventory management system with real-time stock tracking, low-stock alerts, and comprehensive reporting dashboard for businesses.",
+        "fr": "Système complet de gestion d'inventaire avec suivi des stocks en temps réel, alertes de rupture de stock et tableau de bord de rapports complets pour les entreprises.",
+        "sw": "Mfumo kamili wa usimamizi wa hesabu na ufuatiliaji wa kwa wakati halisi, arifa za upungufu wa hisa, na dashibodi ya kuripoti kwa biashara."
+      },
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+      "tags": ["React", "Node.js", "PostgreSQL", "Express"],
+      "link": "https://github.com/alexismupole",
+      "liveLink": null,
+      "featured": true
+    },
+    {
       "id": "school-management-system",
       "title": {
         "en": "School Management System",
