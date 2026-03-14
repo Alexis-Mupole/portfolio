@@ -104,7 +104,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      <Projects />
+      <Projects limit={6} />
 
       <section className="py-12 bg-slate-50 text-center">
         <button 

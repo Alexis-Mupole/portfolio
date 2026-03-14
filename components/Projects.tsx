@@ -14,9 +14,14 @@ interface Project {
   featured: boolean;
 }
 
-const Projects: React.FC = () => {
+interface ProjectsProps {
+  limit?: number;
+}
+
+const Projects: React.FC<ProjectsProps> = ({ limit }) => {
   const { lang, getProjects } = useTranslation();
-  const projects = getProjects();
+  const allProjects = getProjects();
+  const projects = limit ? allProjects.slice(0, limit) : allProjects;
 
   return (
     <section className="py-20 lg:py-28 bg-slate-50" id="projects">
