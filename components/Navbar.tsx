@@ -1,9 +1,8 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Page } from '../App';
 import { useTranslation } from '../src/context/LanguageContext';
 import { Language } from '../translations';
-import { LayoutGrid, Scan, Layers, Box, HelpCircle, User } from 'lucide-react';
+import { Menu, X, User, MessageCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface NavbarProps {
@@ -13,15 +12,24 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { lang, setLang } = useTranslation();
 
-  const links: { name: string; id: Page; icon: React.ReactNode }[] = [
-    { name: 'HOME', id: 'home', icon: <LayoutGrid size={14} /> },
-    { name: 'SERVICES', id: 'services', icon: <Scan size={14} /> },
-    { name: 'EXPERTISE', id: 'solutions', icon: <Layers size={14} /> },
-    { name: 'PROJECTS', id: 'projects', icon: <Box size={14} /> },
-    { name: 'CONTACT', id: 'contact', icon: <HelpCircle size={14} /> },
+  const links: { name: string; id: Page }[] = [
+    { name: 'Home', id: 'home' },
+    { name: 'Services', id: 'services' },
+    { name: 'Expertise', id: 'solutions' },
+    { name: 'Projects', id: 'projects' },
+    { name: 'Contact', id: 'contact' },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleNav = (id: Page) => {
     onNavigate(id);
@@ -29,103 +37,116 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-black/5 py-3">
-      <div className="max-w-[1400px] mx-auto px-6">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg py-3' : 'bg-white py-4'
+    }`}>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          
-          {/* Left Branding */}
           <button 
             onClick={() => handleNav('home')}
-            className="flex items-center gap-2 group"
+            className="flex items-center gap-3 group"
           >
-            <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center transition-transform group-hover:rotate-12">
-              <User size={16} className="text-white" />
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center transition-transform group-hover:scale-105">
+              <User size={18} className="text-white" />
             </div>
             <div className="flex flex-col items-start leading-none">
-              <span className="text-[10px] font-black uppercase tracking-tighter">ALEXIS MUPOLE</span>
-              <span className="text-[8px] font-medium opacity-50 uppercase tracking-widest">Consultant</span>
+              <span className="text-base font-bold text-slate-900">Alexis Mupole</span>
+              <span className="text-xs text-slate-500">Digital Consultant</span>
             </div>
           </button>
 
-          {/* Center Navigation */}
-          <div className="hidden lg:flex items-center bg-black/5 p-1 rounded-full border border-black/5">
+          <div className="hidden lg:flex items-center gap-1">
             {links.map((link) => (
               <button
                 key={link.id}
                 onClick={() => handleNav(link.id)}
-                className={`px-4 py-1.5 rounded-full flex items-center gap-2 text-[9px] font-bold uppercase tracking-widest transition-all ${
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                   currentPage === link.id 
-                    ? 'bg-white text-black shadow-sm' 
-                    : 'text-black/40 hover:text-black hover:bg-white/50'
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                 }`}
               >
-                {link.icon}
-                <span>{link.name}</span>
+                {link.name}
               </button>
             ))}
           </div>
 
-          {/* Right Side Actions */}
-          <div className="flex items-center gap-3">
-            {/* Language Switcher */}
-            <div className="hidden md:flex items-center bg-black/5 p-0.5 rounded-lg border border-black/5">
-              {(['fr', 'en', 'sw'] as Language[]).map(l => (
+          <div className="hidden lg:flex items-center gap-3">
+            <div className="flex bg-slate-100 rounded-lg p-1">
+              {(['fr', 'en'] as Language[]).map(l => (
                 <button
                   key={l}
                   onClick={() => setLang(l)}
-                  className={`px-2 py-1 text-[8px] font-black uppercase rounded-md transition-all ${
-                    lang === l ? 'bg-white text-black shadow-sm' : 'text-black/40 hover:text-black'
+                  className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all ${
+                    lang === l ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'
                   }`}
                 >
-                  {l}
+                  {l.toUpperCase()}
                 </button>
               ))}
             </div>
 
-            {/* Mobile Menu Toggle */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-lg bg-black/5 hover:bg-black/10 transition-colors"
+            <button 
+              onClick={() => handleNav('contact')}
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
             >
-              <LayoutGrid size={18} />
+              <MessageCircle size={16} />
+              Let's Talk
             </button>
           </div>
+
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-black/5 p-4 space-y-2 shadow-xl"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden bg-white border-t border-slate-100 overflow-hidden"
           >
-            {links.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => handleNav(link.id)}
-                className={`flex items-center gap-3 w-full p-3 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all ${
-                  currentPage === link.id ? 'bg-black text-white' : 'bg-black/5 text-black'
-                }`}
-              >
-                {link.icon}
-                <span>{link.name}</span>
-              </button>
-            ))}
-            <div className="flex justify-center gap-1 pt-2">
-              {(['fr', 'en', 'sw'] as Language[]).map(l => (
+            <div className="px-6 py-4 space-y-2">
+              {links.map((link) => (
                 <button
-                  key={l}
-                  onClick={() => setLang(l)}
-                  className={`flex-1 py-2 rounded-lg font-black uppercase text-[9px] border border-black/5 ${
-                    lang === l ? 'bg-black text-white' : 'bg-white text-black'
+                  key={link.id}
+                  onClick={() => handleNav(link.id)}
+                  className={`flex w-full p-3 rounded-lg text-sm font-medium transition-all ${
+                    currentPage === link.id 
+                      ? 'bg-blue-600 text-white' 
+                      : 'text-slate-600 hover:bg-slate-50'
                   }`}
                 >
-                  {l === 'fr' ? 'FR' : l === 'en' ? 'EN' : 'SW'}
+                  {link.name}
                 </button>
               ))}
+              <div className="flex gap-2 pt-2">
+                {(['fr', 'en'] as Language[]).map(l => (
+                  <button
+                    key={l}
+                    onClick={() => setLang(l)}
+                    className={`flex-1 py-2.5 rounded-lg font-medium text-sm border ${
+                      lang === l 
+                        ? 'bg-blue-600 text-white border-blue-600' 
+                        : 'bg-white text-slate-600 border-slate-200'
+                    }`}
+                  >
+                    {l.toUpperCase()}
+                  </button>
+                ))}
+              </div>
+              <button 
+                onClick={() => handleNav('contact')}
+                className="w-full mt-2 p-3 bg-blue-600 text-white rounded-lg font-medium text-sm"
+              >
+                Let's Talk
+              </button>
             </div>
           </motion.div>
         )}
