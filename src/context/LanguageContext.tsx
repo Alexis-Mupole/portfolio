@@ -1,6 +1,7 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
 import { Language, translations } from '../../translations';
 import projectsData from '../../data/projects.json';
+import servicesData from '../../data/services.json';
 
 interface LanguageContextType {
   lang: Language;
@@ -10,6 +11,9 @@ interface LanguageContextType {
   getProjectDescription: (id: string) => string;
   getProjects: () => typeof projectsData.projects;
   getFeaturedProjects: () => typeof projectsData.projects;
+  getServices: () => typeof servicesData.services;
+  getServiceTitle: (id: string) => string;
+  getServiceDescription: (id: string) => string;
 }
 
 export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -34,6 +38,20 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
 
   const getFeaturedProjects = () => projectsData.projects.filter(p => p.featured);
 
+  const getServices = () => servicesData.services;
+
+  const getServiceTitle = (id: string): string => {
+    const service = servicesData.services.find(s => s.id === id);
+    if (!service) return id;
+    return service.title[lang] || service.title.en;
+  };
+
+  const getServiceDescription = (id: string): string => {
+    const service = servicesData.services.find(s => s.id === id);
+    if (!service) return '';
+    return service.description[lang] || service.description.en;
+  };
+
   return (
     <LanguageContext.Provider value={{ 
       lang, 
@@ -42,7 +60,10 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
       getProjectTitle,
       getProjectDescription,
       getProjects,
-      getFeaturedProjects
+      getFeaturedProjects,
+      getServices,
+      getServiceTitle,
+      getServiceDescription
     }}>
       {children}
     </LanguageContext.Provider>
