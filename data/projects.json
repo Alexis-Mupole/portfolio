@@ -1,0 +1,112 @@
+{
+  "projects": [
+    {
+      "id": "stock-management",
+      "title": {
+        "en": "Stock Management System",
+        "fr": "Système de Gestion de Stock",
+        "sw": "Mfumo wa Usimamizi wa Hisa"
+      },
+      "description": {
+        "en": "Web application for real-time inventory tracking with stock-out alerts and analytics dashboard.",
+        "fr": "Application web pour le suivi en temps réel des inventaires avec alertes de rupture et tableau de bord analytique.",
+        "sw": "Programu ya wavuti kwa ufuatiliaji wa hesabu kwa wakati halisi na arifa za upungufu na dashibodi ya uchambuzi."
+      },
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+      "tags": ["React", "Node.js", "PostgreSQL"],
+      "link": "https://github.com/alexismupole/stock-management",
+      "liveLink": null,
+      "featured": true
+    },
+    {
+      "id": "portfolio-website",
+      "title": {
+        "en": "Professional Portfolio",
+        "fr": "Portfolio Professionnel",
+        "sw": "Portfolio ya Kitaaluma"
+      },
+      "description": {
+        "en": "Modern, responsive portfolio website with dark mode and smooth animations.",
+        "fr": "Site portfolio moderne et responsive avec mode sombre et animations fluides.",
+        "sw": "Tovuti ya portfolio ya kisasa na inayojibu na mode ya giza na animazioni laini."
+      },
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
+      "tags": ["Next.js", "TypeScript", "Tailwind"],
+      "link": "https://github.com/Alexis-Mupole/portfolio",
+      "liveLink": "https://alexismupole.com",
+      "featured": true
+    },
+    {
+      "id": "school-management",
+      "title": {
+        "en": "School Management System",
+        "fr": "Système de Gestion Scolaire",
+        "sw": "Mfumo wa Usimamizi wa Shule"
+      },
+      "description": {
+        "en": "Complete school management system with student records, grades, and attendance tracking.",
+        "fr": "Système complet de gestion scolaire avec dossiers étudiants, notes et suivi de présence.",
+        "sw": "Mfumo kamili wa usimamizi wa shule na rekodi za wanafunzi, alama, na ufuatiliaji wa ushiriki."
+      },
+      "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&auto=format&fit=crop",
+      "tags": ["Laravel", "MySQL", "Bootstrap"],
+      "link": "https://github.com/alexismupole/school-management",
+      "liveLink": null,
+      "featured": true
+    },
+    {
+      "id": "medical-appointment",
+      "title": {
+        "en": "Medical Appointment Booking",
+        "fr": "Prise de Rendez-vous Médical",
+        "sw": "Kuhifadhi Miadi ya Matibabu"
+      },
+      "description": {
+        "en": "Online appointment booking system for clinics with SMS notifications.",
+        "fr": "Système de réservation en ligne pour cliniques avec notifications SMS.",
+        "sw": "Mfumo wa kuhifadhi miadi mtandaoni kwa vituo vya afya na arifa za SMS."
+      },
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop",
+      "tags": ["Vue.js", "Firebase", "Twilio"],
+      "link": "https://github.com/alexismupole/medical-booking",
+      "liveLink": null,
+      "featured": false
+    },
+    {
+      "id": "e-commerce-platform",
+      "title": {
+        "en": "E-Commerce Platform",
+        "fr": "Plateforme E-Commerce",
+        "sw": "Jukwaa la Biashara Mtandaoni"
+      },
+      "description": {
+        "en": "Full-featured e-commerce platform with payment integration and inventory management.",
+        "fr": "Plateforme e-commerce complète avec intégration de paiement et gestion des stocks.",
+        "sw": "Jukwaa la biashara mtandaoni kamili na ushirikiano wa malipo na usimamizi wa hesabu."
+      },
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop",
+      "tags": ["Next.js", "Stripe", "Prisma"],
+      "link": "https://github.com/alexismupole/ecommerce",
+      "liveLink": "https://shop.example.com",
+      "featured": false
+    },
+    {
+      "id": "church-website",
+      "title": {
+        "en": "Church Management Website",
+        "fr": "Site de Gestion d'Église",
+        "sw": "Tovuti ya Usimamizi wa Kanisa"
+      },
+      "description": {
+        "en": "Church website with event management, member directory, and donation system.",
+        "fr": "Site d'église avec gestion d'événements, annuaire des membres et système de dons.",
+        "sw": "Tovuti ya kanisa na usimamizi wa matukio, orodha ya wanachama, na mfumo wa michango."
+      },
+      "image": "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=800&auto=format&fit=crop",
+      "tags": ["WordPress", "PHP", "MySQL"],
+      "link": "https://github.com/alexismupole/church-website",
+      "liveLink": null,
+      "featured": false
+    }
+  ]
+}

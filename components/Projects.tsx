@@ -1,66 +1,139 @@
-
 import React from 'react';
 import { useTranslation } from '../src/context/LanguageContext';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Github, ExternalLink, Code2 } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+interface Project {
+  id: string;
+  title: { en: string; fr: string; sw: string };
+  description: { en: string; fr: string; sw: string };
+  image: string;
+  tags: string[];
+  link: string;
+  liveLink: string | null;
+  featured: boolean;
+}
 
 const Projects: React.FC = () => {
-  const { t } = useTranslation();
-
-  const projectList = [
-    { id: 'stock', icon: '📊', color: 'bg-black text-white' },
-    { id: 'showcase', icon: '🌐', color: 'bg-black text-white' },
-    { id: 'maintenance', icon: '💻', color: 'bg-black text-white' },
-    { id: 'network', icon: '🔌', color: 'bg-black text-white' },
-  ];
+  const { lang, getProjects } = useTranslation();
+  const projects = getProjects();
 
   return (
-    <section className="py-24 bg-white" id="projects">
-      <div className="max-w-[1400px] mx-auto px-6">
+    <section className="py-20 lg:py-28 bg-slate-50" id="projects">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="mb-16">
-          <h2 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] mb-4">
-            {t.projects.title}
+          <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider mb-3 block">
+            {lang === 'en' ? 'Portfolio' : lang === 'fr' ? 'Portfolio' : 'Kazi Zangu'}
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+            {lang === 'en' ? 'Recent Projects' : lang === 'fr' ? 'Projets Récents' : 'Miradi ya Hivi Karibuni'}
           </h2>
-          <p className="text-4xl md:text-5xl font-black text-black tracking-tighter max-w-2xl leading-none uppercase">
-            {t.projects.desc}
+          <p className="text-slate-600 text-lg max-w-2xl">
+            {lang === 'en' 
+              ? 'Discover some of my recent work and technical achievements.' 
+              : lang === 'fr' 
+              ? 'Découvrez quelques-unes de mes réalisations techniques récentes.' 
+              : 'Gundua baadhi ya kazi yangu ya hivi karibuni na mafanikio ya kiufundi.'}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {projectList.map((project, index) => (
-            <div 
-              key={project.id}
-              className="group relative p-8 border border-black/5 bg-slate-50/50 rounded-3xl hover:bg-black transition-all duration-500 overflow-hidden"
-            >
-              <div className="relative z-10 h-full flex flex-col">
-                <div className="flex justify-between items-start mb-12">
-                  <span className="text-[10px] font-black text-slate-400 group-hover:text-white/40 transition-colors">
-                    0{index + 1}
-                  </span>
-                  <div className="w-8 h-8 rounded-full border border-black/10 flex items-center justify-center group-hover:border-white/20 transition-colors">
-                    <ArrowUpRight size={14} className="text-black group-hover:text-white transition-colors" />
-                  </div>
-                </div>
-
-                <div className="mt-auto">
-                  <div className="text-2xl mb-4 group-hover:scale-110 transition-transform origin-left duration-500">
-                    {project.icon}
-                  </div>
-                  <h3 className="text-sm font-black text-black mb-2 uppercase tracking-tight group-hover:text-white transition-colors">
-                    {t.projects.items[project.id].t}
-                  </h3>
-                  <p className="text-[10px] text-slate-500 font-medium leading-relaxed group-hover:text-white/60 transition-colors">
-                    {t.projects.items[project.id].d}
-                  </p>
-                </div>
-              </div>
-
-              {/* Background gradient on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-slate-900 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project: Project, index: number) => (
+            <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
       </div>
     </section>
+  );
+};
+
+const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, index }) => {
+  const { lang } = useTranslation();
+  const title = project.title[lang] || project.title.en;
+  const description = project.description[lang] || project.description.en;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1, duration: 0.5 }}
+      className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+    >
+      <div className="relative h-48 overflow-hidden">
+        <img 
+          src={project.image} 
+          alt={title}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+        <div className="absolute bottom-4 left-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0">
+          {project.link && (
+            <a 
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-3 py-2 bg-white text-slate-900 rounded-lg text-sm font-medium hover:bg-slate-100 transition-colors"
+            >
+              <Github size={16} />
+              Code
+            </a>
+          )}
+          {project.liveLink && (
+            <a 
+              href={project.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-3 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+            >
+              <ExternalLink size={16} />
+              Live
+            </a>
+          )}
+        </div>
+      </div>
+
+      <div className="p-6">
+        <div className="flex flex-wrap gap-2 mb-3">
+          {project.tags.slice(0, 3).map((tag: string) => (
+            <span 
+              key={tag}
+              className="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+          {title}
+        </h3>
+        
+        <p className="text-slate-600 text-sm leading-relaxed line-clamp-2">
+          {description}
+        </p>
+
+        <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
+          <span className="text-xs text-slate-400 font-medium">
+            {project.featured && (
+              <span className="inline-flex items-center gap-1 text-amber-600">
+                <Code2 size={12} />
+                Featured
+              </span>
+            )}
+          </span>
+          <a 
+            href={project.link || '#'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+          >
+            View Project
+            <ArrowUpRight size={16} />
+          </a>
+        </div>
+      </div>
+    </motion.div>
   );
 };
 
