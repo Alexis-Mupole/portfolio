@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-alexismupole.com-blue)](https://alexismupole.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-alexismupole-blue)](https://linkedin.com/in/alexismupole)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-alexismupole-blue)](https://linkedin.com/in/alexis-mupole)
 [![GitHub](https://img.shields.io/badge/GitHub-Alexis--Mupole-black)](https://github.com/Alexis-Mupole)
 
 </div>
@@ -105,10 +105,6 @@ Build the project and deploy the `dist` folder to any static hosting service:
 npm run build
 ```
 
-Recommended platforms:
-- Vercel
-- Netlify
-- GitHub Pages
 
 ## License
 
@@ -116,4 +112,4 @@ MIT License - See LICENSE file for details.
 
 ---
 
-Built with ❤️ by Alexis Mupole
+Built by Alexis Mupole
