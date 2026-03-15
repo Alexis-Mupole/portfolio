@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-alexismupole.com-blue)](https://alexismupole.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-alexismupole.com-blue)](https://alexismupole.netlify.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-alexismupole-blue)](https://linkedin.com/in/alexis-mupole)
 [![GitHub](https://img.shields.io/badge/GitHub-Alexis--Mupole-black)](https://github.com/Alexis-Mupole)
 
