@@ -9,6 +9,7 @@ import TarifsPage from './pages/TarifsPage';
 import ContactPage from './pages/ContactPage';
 import ProjectsPage from './pages/ProjectsPage';
 import { LanguageProvider } from './src/context/LanguageContext';
+import { MessageCircle } from 'lucide-react';
 
 class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
   constructor(props: { children: React.ReactNode }) {
@@ -48,6 +49,20 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { has
 
 export type Page = 'home' | 'services' | 'solutions' | 'projects' | 'pricing' | 'contact';
 
+const WhatsAppButton: React.FC = () => {
+  return (
+    <a
+      href="https://wa.me/243997306308"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all hover:scale-110 animate-bounce"
+      aria-label="Chat on WhatsApp"
+    >
+      <MessageCircle size={28} />
+    </a>
+  );
+};
+
 const AppContent: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>('home');
 
@@ -81,6 +96,7 @@ const AppContent: React.FC = () => {
         {renderPage()}
       </main>
       <Footer onNavigate={setCurrentPage} />
+      <WhatsAppButton />
     </div>
   );
 };
