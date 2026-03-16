@@ -46,6 +46,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
   const handleNav = (id: Page) => {
     onNavigate(id);
     setIsOpen(false);
+    window.scrollTo(0, 0);
   };
 
   return (
