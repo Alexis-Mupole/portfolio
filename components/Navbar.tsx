@@ -13,14 +13,26 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { lang, setLang } = useTranslation();
+  const { lang, setLang, t } = useTranslation();
 
-  const links: { name: string; id: Page }[] = [
-    { name: 'Home', id: 'home' },
-    { name: 'Services', id: 'services' },
-    { name: 'Expertise', id: 'solutions' },
-    { name: 'Projects', id: 'projects' },
-    { name: 'Contact', id: 'contact' },
+  const getLinkName = (id: Page) => {
+    const navMap: Record<string, string> = {
+      home: 'home',
+      services: 'services',
+      solutions: 'expertise',
+      projects: 'projects',
+      contact: 'contact',
+    };
+    const key = navMap[id] as keyof typeof t.nav;
+    return t.nav[key] || id;
+  };
+
+  const links: { id: Page }[] = [
+    { id: 'home' },
+    { id: 'services' },
+    { id: 'solutions' },
+    { id: 'projects' },
+    { id: 'contact' },
   ];
 
   useEffect(() => {
@@ -66,14 +78,14 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                     : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                 }`}
               >
-                {link.name}
+                {getLinkName(link.id)}
               </button>
             ))}
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
             <div className="flex bg-slate-100 rounded-lg p-1">
-              {(['fr', 'en'] as Language[]).map(l => (
+              {(['fr', 'en', 'sw'] as Language[]).map(l => (
                 <button
                   key={l}
                   onClick={() => setLang(l)}
@@ -91,7 +103,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
             >
               <MessageCircle size={16} />
-              Let's Talk
+              {t.hero.ctaPrimary}
             </button>
           </div>
 
@@ -123,11 +135,11 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                       : 'text-slate-600 hover:bg-slate-50'
                   }`}
                 >
-                  {link.name}
+                  {getLinkName(link.id)}
                 </button>
               ))}
               <div className="flex gap-2 pt-2">
-                {(['fr', 'en'] as Language[]).map(l => (
+                {(['fr', 'en', 'sw'] as Language[]).map(l => (
                   <button
                     key={l}
                     onClick={() => setLang(l)}
@@ -145,7 +157,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                 onClick={() => handleNav('contact')}
                 className="w-full mt-2 p-3 bg-blue-600 text-white rounded-lg font-medium text-sm"
               >
-                Let's Talk
+                {t.hero.ctaPrimary}
               </button>
             </div>
           </motion.div>

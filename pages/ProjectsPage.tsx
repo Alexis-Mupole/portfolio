@@ -12,9 +12,9 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate }) => {
   const { t } = useTranslation();
 
   const stats = [
-    { icon: <Star size={24} />, number: "50+", label: "Projects Completed" },
-    { icon: <Users size={24} />, number: "30+", label: "Happy Clients" },
-    { icon: <Globe size={24} />, number: "10+", label: "Countries" },
+    { icon: <Star size={24} />, number: "50+", label: t.projectsPage.stats.projects },
+    { icon: <Users size={24} />, number: "30+", label: t.projectsPage.stats.clients },
+    { icon: <Globe size={24} />, number: "10+", label: t.projectsPage.stats.countries },
   ];
 
   return (
@@ -54,17 +54,16 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate }) => {
       <section className="py-20 lg:py-28 bg-slate-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            Have a Similar Project in Mind?
+            {t.projectsPage.cta.title}
           </h2>
           <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
-            Every project is unique. I adapt to your technical requirements and budget 
-            to deliver the best possible results.
+            {t.projectsPage.cta.desc}
           </p>
           <button 
             onClick={() => onNavigate('contact')}
             className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors"
           >
-            Get a Free Quote <ArrowRight size={18} />
+            {t.projectsPage.cta.button} <ArrowRight size={18} />
           </button>
         </div>
       </section>

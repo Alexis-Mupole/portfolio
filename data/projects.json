@@ -1,130 +1,156 @@
 {
   "projects": [
     {
-      "id": "stock-management-system",
+      "id": "portfolio",
       "title": {
-        "en": "Inventory Management System",
-        "fr": "Système de Gestion d'Inventaire",
-        "sw": "Mfumo wa Usimamizi wa Hisa"
+        "en": "Personal Portfolio Website",
+        "fr": "Site Portfolio Personnel",
+        "sw": "Tovuti ya Portfolio ya Binadamu"
       },
       "description": {
-        "en": "Full-featured inventory management system with real-time stock tracking, low-stock alerts, and comprehensive reporting dashboard for businesses.",
-        "fr": "Système complet de gestion d'inventaire avec suivi des stocks en temps réel, alertes de rupture de stock et tableau de bord de rapports complets pour les entreprises.",
-        "sw": "Mfumo kamili wa usimamizi wa hesabu na ufuatiliaji wa kwa wakati halisi, arifa za upungufu wa hisa, na dashibodi ya kuripoti kwa biashara."
-      },
-      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
-      "tags": ["React", "Node.js", "PostgreSQL", "Express"],
-      "link": "https://github.com/alexismupole",
-      "liveLink": null,
-      "featured": true
-    },
-    {
-      "id": "stock-management-system",
-      "title": {
-        "en": "Inventory Management System",
-        "fr": "Système de Gestion d'Inventaire",
-        "sw": "Mfumo wa Usimamizi wa Hisa"
-      },
-      "description": {
-        "en": "Full-featured inventory management system with real-time stock tracking, low-stock alerts, and comprehensive reporting dashboard for businesses.",
-        "fr": "Système complet de gestion d'inventaire avec suivi des stocks en temps réel, alertes de rupture de stock et tableau de bord de rapports complets pour les entreprises.",
-        "sw": "Mfumo kamili wa usimamizi wa hesabu na ufuatiliaji wa kwa wakati halisi, arifa za upungufu wa hisa, na dashibodi ya kuripoti kwa biashara."
-      },
-      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
-      "tags": ["React", "Node.js", "PostgreSQL", "Express"],
-      "link": "https://github.com/alexismupole",
-      "liveLink": null,
-      "featured": true
-    },
-    {
-      "id": "school-management-system",
-      "title": {
-        "en": "School Management System",
-        "fr": "Système de Gestion Scolaire",
-        "sw": "Mfumo wa Usimamizi wa Shule"
-      },
-      "description": {
-        "en": "Comprehensive school management platform with student records, grade management, attendance tracking, and parent communication features.",
-        "fr": "Plateforme complète de gestion scolaire avec dossiers étudiants, gestion des notes, suivi de présence et fonctionnalités de communication avec les parents.",
-        "sw": "Jukwaa la kamili la usimamizi wa shule na rekodi za wanafunzi, usimamizi wa alama, ufuatiliaji wa ushiriki, na vipengele vya mawasiliano na wazazi."
-      },
-      "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&auto=format&fit=crop",
-      "tags": ["Laravel", "MySQL", "Bootstrap", "PHP"],
-      "link": "https://github.com/alexismupole",
-      "liveLink": null,
-      "featured": true
-    },
-    {
-      "id": "portfolio-website",
-      "title": {
-        "en": "Professional Portfolio Website",
-        "fr": "Site Portfolio Professionnel",
-        "sw": "Tovuti ya Portfolio ya Kitaaluma"
-      },
-      "description": {
-        "en": "Modern, responsive portfolio website showcasing services, projects, and contact information with smooth animations and professional design.",
-        "fr": "Site portfolio moderne et responsive présentant les services, projets et informations de contact avec des animations fluides et un design professionnel.",
-        "sw": "Tovuti ya kisasa ya portfolio inayoonyesha huduma, miradi, na maelezo ya mawasiliano na animazioni laini na muundo wa kitaaluma."
+        "en": "Modern personal portfolio website built with React, TypeScript, and Tailwind CSS. Features responsive design, multi-language support, and smooth animations.",
+        "fr": "Site portfolio personnel moderne construit avec React, TypeScript et Tailwind CSS. Fonctionnalités包括设计 réactive, support multilingue et animations fluides.",
+        "sw": "Tovuti ya portfolio ya kisasa iliyojengwa kwa React, TypeScript, na Tailwind CSS. Ina vipengele vya muundo wa kujibu, usaidizi wa lugha nyingi, na animzioni laini."
       },
       "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
       "tags": ["React", "TypeScript", "Tailwind CSS", "Vite"],
       "link": "https://github.com/Alexis-Mupole/portfolio",
       "liveLink": "https://alexismupole.com",
-      "featured": true
+      "featured": true,
+      "language": "TypeScript"
     },
     {
-      "id": "medical-appointment",
+      "id": "trinity-pharmacy",
       "title": {
-        "en": "Medical Appointment Booking System",
-        "fr": "Système de Prise de Rendez-vous Médical",
-        "sw": "Mfumo wa Kuhifadhi Miadi ya Matibabu"
+        "en": "Trinity Pharmacy Management",
+        "fr": "Gestion de Pharmacie Trinity",
+        "sw": "Usimamizi wa Pharmacy ya Trinity"
       },
       "description": {
-        "en": "Online appointment booking system for healthcare clinics with patient management, appointment scheduling, and SMS notifications.",
-        "fr": "Système de réservation en ligne pour cliniques de santé avec gestion des patients, planification des rendez-vous et notifications par SMS.",
-        "sw": "Mfumo wa kuhifadhi miadi mtandaoni kwa vituo vya afya na usimamizi wa wagonjwa, kuratibu miadi, na arifa za SMS."
+        "en": "Pharmacy management system for tracking medications, inventory, prescriptions, and customer records with real-time analytics.",
+        "fr": "Système de gestion de pharmacie pour le suivi des médicaments, inventaires, ordonnances et dossiers clients avec analytique en temps réel.",
+        "sw": "Mfumo wa usimamizi wa pharmacy kwa kufuatilia dawa, hesabu, mapokezo, na rekodi za wateja na uchambuzi wa wakati halisi."
       },
-      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop",
-      "tags": ["Vue.js", "Firebase", "Twilio", "Node.js"],
-      "link": "https://github.com/alexismupole",
+      "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop",
+      "tags": ["TypeScript", "React", "Node.js", "PostgreSQL"],
+      "link": "https://github.com/Alexis-Mupole/TrinityPharmacy",
       "liveLink": null,
-      "featured": false
+      "featured": true,
+      "language": "TypeScript"
     },
     {
-      "id": "church-management",
+      "id": "school-management",
       "title": {
-        "en": "Church Management Website",
-        "fr": "Site de Gestion d'Église",
-        "sw": "Tovuti ya Usimamizi wa Kanisa"
+        "en": "Secondary School Result Management System",
+        "fr": "Système de Gestion des Résultats du Lycée",
+        "sw": "Mfumo wa Usimamizi wa Matokeo ya Shule"
       },
       "description": {
-        "en": "Church website with event management, member directory, donation tracking, and online giving capabilities.",
-        "fr": "Site d'église avec gestion des événements, annuaire des membres, suivi des dons et capacités de dons en ligne.",
-        "sw": "Tovuti ya kanisa na usimamizi wa matukio, orodha ya wanachama, ufuatiliaji wa michango, na uwezo wa kutoa mtandaoni."
+        "en": "Comprehensive school management system for managing student records, grades, attendance, and generating academic reports.",
+        "fr": "Système complet de gestion scolaire pour la gestion des dossiers étudiants, des notes, de la présence et la génération de rapports académiques.",
+        "sw": "Mfumo kamili wa usimamizi wa shule kwa kusimamia rekodi za wanafunzi, alama, ushiriki, na kutoa ripoti za kitaaluma."
       },
-      "image": "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=800&auto=format&fit=crop",
-      "tags": ["WordPress", "PHP", "MySQL", "JavaScript"],
-      "link": "https://github.com/alexismupole",
+      "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&auto=format&fit=crop",
+      "tags": ["PHP", "MySQL", "HTML", "JavaScript"],
+      "link": "https://github.com/Alexis-Mupole/Secondary-School-Result-Management-System",
       "liveLink": null,
-      "featured": false
+      "featured": true,
+      "language": "PHP"
     },
     {
-      "id": "hotel-booking",
+      "id": "ghostshare",
       "title": {
-        "en": "Hotel Booking Platform",
-        "fr": "Plateforme de Réservation Hôtelière",
-        "sw": "Jukwaa la Kuhifadhi Hoteli"
+        "en": "GhostShare - File Sharing Platform",
+        "fr": "GhostShare - Plateforme de Partage de Fichiers",
+        "sw": "GhostShare - Jukwaa la Kushiriki Faili"
       },
       "description": {
-        "en": "Hotel booking and management system with room availability, online reservations, payment processing, and guest management.",
-        "fr": "Système de réservation et de gestion hôtelière avec disponibilité des chambres, réservations en ligne, traitement des paiements et gestion des clients.",
-        "sw": "Mfumo wa kuhifadhi na usimamizi wa hoteli na upatikanaji wa chumba, kuhifadhi mtandaoni, usindikaji wa malipo, na usimamizi wa wageni."
+        "en": "Secure file sharing platform with encrypted transfers, expiration links, and cloud storage integration.",
+        "fr": "Plateforme sécurisée de partage de fichiers avec transferts chiffrés, liens d'expiration et intégration de stockage cloud.",
+        "sw": "Jukwaa salama la kushiriki faili kwa maelekezo salama, viungo vya muda, na uunganisho wa hifadhi ya wingu."
       },
-      "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&auto=format&fit=crop",
-      "tags": ["Next.js", "Stripe", "Prisma", "PostgreSQL"],
-      "link": "https://github.com/alexismupole",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+      "tags": ["TypeScript", "React", "Node.js", "AWS"],
+      "link": "https://github.com/Alexis-Mupole/GhostShare",
       "liveLink": null,
-      "featured": false
+      "featured": true,
+      "language": "TypeScript"
+    },
+    {
+      "id": "department-website",
+      "title": {
+        "en": "Department of Computing Website",
+        "fr": "Site du Département d'Informatique",
+        "sw": "Tovuti ya Idara ya Kompyuta"
+      },
+      "description": {
+        "en": "Official department website for the Department of Computing and Technology with course information, news, and faculty profiles.",
+        "fr": "Site officiel du département d'informatique et technologie avec informations sur les cours, nouvelles et profils des enseignants.",
+        "sw": "Tovuti rasmi ya idara ya Kompyuta na Teknolojia na maelezo ya kozi, habari, na wasifu wa walimu."
+      },
+      "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&auto=format&fit=crop",
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "link": "https://github.com/Alexis-Mupole/department-website",
+      "liveLink": null,
+      "featured": false,
+      "language": "HTML"
+    },
+    {
+      "id": "traveler",
+      "title": {
+        "en": "Traveler - Travel Agency Platform",
+        "fr": "Traveler - Plateforme d'Agence de Voyage",
+        "sw": "Traveler - Jukwaa la Shirika la Safari"
+      },
+      "description": {
+        "en": "Travel agency booking platform with package management, booking system, and payment integration.",
+        "fr": "Plateforme de réservation d'agence de voyages avec gestion des forfaits, système de réservation et intégration de paiement.",
+        "sw": "Jukwaa la kuhifadhi ya shirika la safari na usimamizi wa kifurushi, mfumo wa kuhifadhi, na uunganisho wa malipo."
+      },
+      "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&auto=format&fit=crop",
+      "tags": ["PHP", "MySQL", "HTML", "JavaScript"],
+      "link": "https://github.com/Alexis-Mupole/Traveler",
+      "liveLink": null,
+      "featured": false,
+      "language": "PHP"
+    },
+    {
+      "id": "sani-ai",
+      "title": {
+        "en": "SANI-AI - AI Prototype",
+        "fr": "SANI-AI - Prototype IA",
+        "sw": "SANI-AI - Prototaipe wa AI"
+      },
+      "description": {
+        "en": "AI prototype for Dragon's pitch - showcasing machine learning capabilities and natural language processing features.",
+        "fr": "Prototype IA pour Dragon's pitch - présentant les capacités d'apprentissage automatique et les fonctionnalités de traitement du langage naturel.",
+        "sw": "Prototaipe ya AI kwa ajili ya Dragon's pitch - kuonyeshwa uwezo wa kujifunza mashine na vipengele vya usindikaji lugha ya asili."
+      },
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop",
+      "tags": ["HTML", "JavaScript", "Python", "AI"],
+      "link": "https://github.com/Alexis-Mupole/SANI-AI",
+      "liveLink": null,
+      "featured": false,
+      "language": "HTML"
+    },
+    {
+      "id": "soma-agent",
+      "title": {
+        "en": "SOMA-Agent",
+        "fr": "SOMA-Agent",
+        "sw": "SOMA-Agent"
+      },
+      "description": {
+        "en": "Agent-based system for task automation and workflow management with intelligent routing capabilities.",
+        "fr": "Système basé sur l'agent pour l'automatisation des tâches et la gestion des flux de travail avec capacités de routage intelligentes.",
+        "sw": "Mfumo wa msingi wa wakala kwa otomatiki ya kazi na usimamizi wa mtiririko wa kazi na uwezo wa routing wa akili."
+      },
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop",
+      "tags": ["TypeScript", "React", "Node.js"],
+      "link": "https://github.com/Alexis-Mupole/SOMA-AGENT",
+      "liveLink": null,
+      "featured": false,
+      "language": "TypeScript"
     }
   ]
 }

@@ -19,7 +19,7 @@ interface ProjectsProps {
 }
 
 const Projects: React.FC<ProjectsProps> = ({ limit }) => {
-  const { lang, getProjects } = useTranslation();
+  const { lang, getProjects, t } = useTranslation();
   const allProjects = getProjects();
   const projects = limit ? allProjects.slice(0, limit) : allProjects;
 
@@ -28,17 +28,13 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="mb-16">
           <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider mb-3 block">
-            {lang === 'en' ? 'Portfolio' : lang === 'fr' ? 'Portfolio' : 'Kazi Zangu'}
+            {t.projects.portfolio}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            {lang === 'en' ? 'Recent Projects' : lang === 'fr' ? 'Projets Récents' : 'Miradi ya Hivi Karibuni'}
+            {t.projects.recentProjects}
           </h2>
           <p className="text-slate-600 text-lg max-w-2xl">
-            {lang === 'en' 
-              ? 'Discover some of my recent work and technical achievements.' 
-              : lang === 'fr' 
-              ? 'Découvrez quelques-unes de mes réalisations techniques récentes.' 
-              : 'Gundua baadhi ya kazi yangu ya hivi karibuni na mafanikio ya kiufundi.'}
+            {t.projects.desc}
           </p>
         </div>
 
