@@ -59,10 +59,11 @@ export const translations = {
       whatIOfferTitle: 'Ce que j\'offre',
       whatIOffer: [
         'Développement d\'Applications Web Sur Mesure',
-        'Architecture Cloud & Migration',
-        'Intégration IA & Machine Learning',
-        'Conseil Technique & Stratégie',
-        'Développement & Intégration d\'API'
+        'Développement Front-End Réactif',
+        'Architecture Back-End Scalable',
+        'Plateformes E-commerce Avancées',
+        'Maintenance & Optimisation Web',
+        'Refonte & Modernisation Digitale'
       ]
     },
     services: {
@@ -281,11 +282,12 @@ export const translations = {
       stats: { projects: 'Projects Completed', experience: 'Years Experience', projectsNum: '50+', experienceNum: '5+' },
       whatIOfferTitle: 'What I Offer',
       whatIOffer: [
-        'Custom Web Application Development',
-        'Cloud Architecture & Migration',
-        'AI & Machine Learning Integration',
-        'Technical Consulting & Strategy',
-        'API Development & Integration'
+       'Custom Web Application Development',
+        'Responsive Front-End Development',
+        'Scalable Back-End Architecture',
+        'Advanced E-commerce Platforms',
+        'Web Maintenance & Optimization',
+        'Digital Modernization & Redesign'
       ],
       viewAllProjects: 'View All Projects'
     },
@@ -505,11 +507,12 @@ export const translations = {
       stats: { projects: 'Miradi Iliyokamilika', experience: 'Miaka ya U pengalaman', projectsNum: '50+', experienceNum: '5+' },
       whatIOfferTitle: 'Ninachokutoa',
       whatIOffer: [
-        'Uendelezaji wa Programu za Wavuti',
-        'Miundombinu ya Wingu & Migration',
-        'Uunganisho wa AI & Machine Learning',
-        'Ushauri wa Kiufundi & Mkakati',
-        'Uendelezaji & Uunganisho wa API'
+         'Uundaji wa Programu za Wavuti Maalum',
+        'Uundaji wa Muonekano wa Wavuti Unaovutia (Front-End)',
+        'Muundo wa Mifumo ya Ndani Inayoweza Kukua (Back-End)',
+        'Mifumo ya Juu ya Biashara Mtandaoni (E-commerce)',
+        'Ukarabati na Uboreshaji wa Tovuti',
+        'Uboreshaji wa Kidijitali na Usanifu Upya'
       ]
     },
     services: {
